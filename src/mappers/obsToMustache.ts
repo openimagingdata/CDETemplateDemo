@@ -1,4 +1,4 @@
-import { Observation } from "../classes/observation";
+import { Observation } from "../models/observation";
 import Mustache from 'mustache';
 
 export function obsToMustache(obs: Observation, template: string): string {

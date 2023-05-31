@@ -1,6 +1,6 @@
 import { R4 } from '@ahryman40k/ts-fhir-types';
 import { either } from 'fp-ts';
-import { Observation, Code } from '../classes/observation';
+import { Observation, Code } from '../models/observation';
 
 export function jsonToObservation(json: any): Observation {
     // Change validation to use zod schema later

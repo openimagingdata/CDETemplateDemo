@@ -1,6 +1,6 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { jsonToObservation } from './mappers/jsonToObservation';
-import { Observation } from './classes/observation';
+import { Observation } from './models/observation';
 import { obsToMustache } from './mappers/obsToMustache';
 
 const app: express.Application = express();
