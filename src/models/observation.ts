@@ -1,7 +1,7 @@
 export class Observation {
     id!: string;
     code!: Code;
-    bodySite!: Code;
+    bodySite: Code | undefined = undefined;
     components: Record<string, string> = {};
 }
 

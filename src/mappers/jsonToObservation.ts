@@ -1,56 +1,62 @@
-import { R4 } from '@ahryman40k/ts-fhir-types';
-import { either } from 'fp-ts';
+import { observationSchema, ObservationData, ComponentData, SystemCodeData } from '../models/schemas';
 import { Observation, Code } from '../models/observation';
 
-export function jsonToObservation(json: any): Observation {
-    // Change validation to use zod schema later
-    // Only resourceType and code is required
-    const observationValidation = R4.RTTI_Observation.decode(json);
-    if (either.isLeft(observationValidation)) {
-        throw new Error("R4 Observation Validation Error");
-    }
-
-    if (!(json?.id && json?.bodySite && json?.component.length)) {
-        throw new Error("Id, Bodysite, and Component are required");
+export function jsonToObservation(json: object): Observation {
+    if (!(observationSchema.safeParse(json).success)) {
+        throw new Error("Invalid Observation JSON.");
     }
     
-    // Assume valid json object after validation
+    const obsData: ObservationData = json as ObservationData;
+
+    // Assume valid observation JSON after safeParse
     let observation: Observation = new Observation();
 
-    observation.id = json.id;
-    observation.code = codingToCode(json.code);
-    observation.bodySite = codingToCode(json.bodySite.code.coding[0]);
-    json.component.forEach((component: any) => addComponent(observation.components, component));
+    observation.id = obsData.id;
+    observation.code = codingToCode(obsData.code);
+    if (obsData?.bodySite) {
+        observation.bodySite = codingToCode(obsData.bodySite.code.coding[0]);
+    }
+    obsData.component.forEach((component: ComponentData) => addComponent(observation.components, component));
 
     return observation;
 }
 
-function addComponent(record: Record<string, string>, component: any): void {
+function addComponent(record: Record<string, string>, component: ComponentData): void {
     // Assume one element in coding (Only RAD is used)
     const codeKey = component.code.coding[0].code; // Required
     const displayKey1 = component.code.coding[0]?.display;
     const displayKey2 = displayKey1 ? displayKey1.toLowerCase() : undefined;
     const keys = [codeKey, displayKey1, displayKey2];
-    
-    // Assume only one value type is used
-    const valQuantity = component?.valueQuantity;
-    const v1 = valQuantity ? `${valQuantity.value} ${valQuantity.unit}` : undefined;
 
-    const valCodeableObj = component?.valueCodeableConcept?.coding[0];
-    const v2 = valCodeableObj?.display ? valCodeableObj?.display : valCodeableObj?.code;
-
-    const v3 = component?.valueString;
-    const v4 = component?.valueBoolean;
-    const v5 = component?.valueInteger;
+    const value = getComponentValue(component);
 
     keys.forEach((key) => {
         if (key) {
-            record[key] = v1 ?? v2 ?? v3 ?? v4 ?? v5;
+            record[key] = value;
         }
     });
 }
 
-function codingToCode (coding: any): Code {
+function getComponentValue(component: ComponentData): string {
+    if ('valueCodeableConcept' in component) {
+        const codingObj = component.valueCodeableConcept.coding[0];
+        return codingObj?.display ? codingObj?.display : codingObj.code;
+    }
+    if ('valueString' in component) {
+        return component.valueString;
+    }
+    if ('valueInteger' in component) {
+        return component.valueInteger.toString();
+    }
+    if ('valueFloat' in component) {
+        return component.valueFloat.toString();
+    }
+    else {
+        throw new Error("Component Value Format Not Supported.")
+    }
+}
+
+function codingToCode (coding: SystemCodeData): Code {
     const code: Code = new Code();
     code.id = coding.code;
     code.display = coding?.display ? coding?.display : undefined;

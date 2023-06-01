@@ -13,7 +13,7 @@ app.post('/', (req: Request, res: Response, next: NextFunction) => {
         const json = req.body;
 
         if (!(json?.observation && json?.template)) {
-            throw new Error("Observation and mustache template are required.");
+            throw new Error("Observation and Mustache Template are Required.");
         }
 
         const obsJsonString: string = json.observation;
