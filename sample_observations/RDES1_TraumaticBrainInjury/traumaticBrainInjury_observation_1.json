@@ -1,0 +1,84 @@
+{
+    "$schema": "../observation_schema.json",
+    "resourceType": "Observation",
+    "id": "f47ac0a5-d939-47ce-9892-df2a8e71b629",
+    "code": {
+        "system": "https://www.radelement.org",
+        "code": "RDES1",
+        "display": "Traumatic Brain Injury"
+    },
+    "bodySite": {
+        "code": {
+            "coding": [
+                {
+                    "system": "https://www.anatomiclocations.org",
+                    "code": "RID6434",
+                    "display": "Brain"
+                }
+            ]
+        }
+    },
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE2",
+                        "display": "Imaging modality"
+                    }
+                ]
+            },
+            "valueString": "5"
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE3",
+                        "display": "Imaging scanner strength"
+                    }
+                ]
+            },
+            "valueString": "1"
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE4",
+                        "display": "Imaging scanner manufacturer name"
+                    }
+                ]
+            },
+            "valueString": "7"
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE7",
+                        "display": "Imaging sequence"
+                    }
+                ]
+            },
+            "valueString": "1"
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE8",
+                        "display": "Brain imaging result"
+                    }
+                ]
+            },
+            "valueString": "2"
+        }
+    ]
+
+}
