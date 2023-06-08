@@ -1,0 +1,13 @@
+{
+  "name": "obs-mapper",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "install-all": "cd mapper-ui && npm install && cd ../mapper-logic && npm install",
+    "build-all": "cd mapper-ui && npm run build && cd ../mapper-logic && npm run build",
+    "start": "cd mapper-logic && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
