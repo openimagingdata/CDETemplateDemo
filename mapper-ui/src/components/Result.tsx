@@ -1,15 +1,34 @@
 import { DetailsList, DetailsListLayoutMode, Tooltip } from '@fluentui/react';
 
 const Display = (data: object) => {
+
+    const outputValue = (value: string) => {
+        const regexRDES = /^RDES\d+/;
+        const regexRDE = /^RDE\d+/;
+
+        // Check RDES
+        if (regexRDES.test(value)) {
+            const url: string = `https://radelement.org/home/sets/set/${value}`;
+            return <a href={url}>{value}</a>
+        }
+        // Check RDE
+        if (regexRDE.test(value)) {
+            const url: string = `https://radelement.org/home/sets/element/${value}`;
+            return <a href={url}>{value}</a>;
+        }
+    
+        return value;
+    }
+
     const render = (value: any) => {
         if (typeof value === 'object') {
             return Display(value);
         }
-        return value;
+        return outputValue(value);
     }
 
     const transformedData = Object.entries(data).map(([key, value]) => ({
-        key: key,
+        key: outputValue(key),
         value: render(value)
         }))
 

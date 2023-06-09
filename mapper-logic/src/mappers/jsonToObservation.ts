@@ -25,19 +25,20 @@ function addComponent(record: Record<string, string>, component: ComponentData):
     // Assume one element in coding (Only RAD is used)
     const codeKey = component.code.coding[0].code; // Required
 
-    const display = component.code.coding[0]?.display;
-    const upperCaseDisplay = display ? display[0].toUpperCase() + display.slice(1) : undefined;
-    const lowerCaseDisplay = upperCaseDisplay ? upperCaseDisplay.toLowerCase() : undefined;
+    const codeDisplay = component.code.coding[0]?.display;
+    const lowerCaseKey = codeDisplay ? codeDisplay.toLowerCase() : undefined;
+    const upperCaseKey = codeDisplay ? codeDisplay[0].toUpperCase() + codeDisplay.slice(1) : undefined;
 
-    const lowerCaseValue = getComponentValue(component);
-    const upperCaseValue = lowerCaseValue[0].toUpperCase() + lowerCaseValue.slice(1);
+    const valueDisplay: string = getComponentValue(component);
+    const lowerCaseValue = valueDisplay.toLowerCase();
+    const upperCaseValue = valueDisplay[0].toUpperCase() + valueDisplay.slice(1);
 
     record[codeKey] = lowerCaseValue;
-    if (lowerCaseDisplay) {
-        record[lowerCaseDisplay] = lowerCaseValue;
+    if (lowerCaseKey) {
+        record[lowerCaseKey] = lowerCaseValue;
     }
-    if (upperCaseDisplay) {
-        record[upperCaseDisplay] = upperCaseValue;
+    if (upperCaseKey) {
+        record[upperCaseKey] = upperCaseValue;
     }
 }
 
