@@ -1,0 +1,16 @@
+  [
+    {
+      "name": "Ankle Fracture",
+      "cdeId": "RDES262",
+      "samples": [
+        "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/sample_observations/RDES262_AnkleFracture/observation1.json"
+      ]
+    },
+    {
+      "name": "Pneumothorax",
+      "cdeId": "RDES44",
+      "samples": [
+        "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/sample_observations/RDES44_Pneumothorax/observation1.json"
+      ]
+    }
+  ]

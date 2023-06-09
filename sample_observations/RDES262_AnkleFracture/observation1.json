@@ -1,0 +1,83 @@
+{
+    "$schema": "./observation_schema.json",
+    "resourceType": "Observation",
+    "id": "28d99870-ace5-46bd-8742-1d9a6d1796fc",
+    "code": {
+      "system": "https://radelement.org",
+      "code": "RDES262",
+      "display": "Ankle Fracture"
+    },
+    "bodySite": {
+      "code": {
+        "coding": [
+          {
+            "system": "https://www.anatomiclocations.org/",
+            "code": "RID34951",
+            "display": "ankle fracture"
+          }
+        ]
+      }
+    },
+    "component": [
+      {
+        "code": {
+          "coding": [
+            {
+              "system": "https://radelement.org",
+              "code": "RDE1686",
+              "display": "Talocrural joint fracture"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://radelement.org",
+              "code": "RDE1686.0",
+              "display": "Present"
+            }
+          ]
+        }
+      },
+      {
+        "code": {
+          "coding": [
+            {
+              "system": "https://radelement.org",
+              "code": "RDE1687",
+              "display": "Subtalar joint fracture"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://radelement.org",
+              "code": "RDE1687.0",
+              "display": "Present"
+            }
+          ]
+        }
+      },
+      {
+        "code": {
+          "coding": [
+            {
+              "system": "https://radelement.org",
+              "code": "RDE1688",
+              "display": "Inferior tibiofibular joint fracture"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://radelement.org",
+              "code": "RDE1688.0",
+              "display": "present"
+            }
+          ]
+        }
+      }
+    ]
+  }
