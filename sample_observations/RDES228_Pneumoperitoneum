@@ -1,0 +1,63 @@
+{
+  "$schema": "./observation_schema.json",
+  "resourceType": "Observation",
+  "id": "750a32e3-1974-4fb2-8e5b-5b902b8186e3",
+  "code": {
+    "system": "https://radelement.org",
+    "code": "RDES228",
+    "display": "Pneumoperitoneum"
+  },
+  "bodySite": {
+    "code": {
+      "coding": [
+        {
+          "system": "https://www.anatomiclocations.org",
+          "code": "RID1327",
+          "display": "Peritoneal cavity"
+        }
+      ]
+    }
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE421",
+            "display": "Presence"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE421.1",
+            "display": "Present"
+          }
+        ]
+      }
+    },
+  {,
+ "code": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE423",
+            "display": "Side"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE423.1",
+            "display": "Left"
+          }
+        ]
+      }
+    }
+  ]
+}
