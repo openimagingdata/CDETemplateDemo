@@ -24,23 +24,28 @@ export function jsonToObservation(json: object): Observation {
 function addComponent(record: Record<string, string>, component: ComponentData): void {
     // Assume one element in coding (Only RAD is used)
     const codeKey = component.code.coding[0].code; // Required
-    const displayKey1 = component.code.coding[0]?.display;
-    const displayKey2 = displayKey1 ? displayKey1.toLowerCase() : undefined;
-    const keys = [codeKey, displayKey1, displayKey2];
 
-    const value = getComponentValue(component);
+    const codeDisplay = component.code.coding[0]?.display;
+    const lowerCaseKey = codeDisplay ? codeDisplay.toLowerCase() : undefined;
+    const upperCaseKey = codeDisplay ? codeDisplay[0].toUpperCase() + codeDisplay.slice(1) : undefined;
 
-    keys.forEach((key) => {
-        if (key) {
-            record[key] = value;
-        }
-    });
+    const valueDisplay: string = getComponentValue(component);
+    const lowerCaseValue = valueDisplay.toLowerCase();
+    const upperCaseValue = valueDisplay[0].toUpperCase() + valueDisplay.slice(1);
+
+    record[codeKey] = lowerCaseValue;
+    if (lowerCaseKey) {
+        record[lowerCaseKey] = lowerCaseValue;
+    }
+    if (upperCaseKey) {
+        record[upperCaseKey] = upperCaseValue;
+    }
 }
 
 function getComponentValue(component: ComponentData): string {
     if ('valueCodeableConcept' in component) {
         const codingObj = component.valueCodeableConcept.coding[0];
-        return codingObj?.display ? codingObj?.display : codingObj.code;
+        return codingObj?.display ?? codingObj.code;
     }
     if ('valueString' in component) {
         return component.valueString;
@@ -59,7 +64,7 @@ function getComponentValue(component: ComponentData): string {
 function codingToCode (coding: SystemCodeData): Code {
     const code: Code = new Code();
     code.id = coding.code;
-    code.display = coding?.display ? coding?.display : undefined;
+    code.display = coding?.display ?? undefined;
 
     return code;
 }

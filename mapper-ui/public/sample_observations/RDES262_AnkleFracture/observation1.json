@@ -9,14 +9,11 @@
     },
     "bodySite": {
       "code": {
-        "coding": [
-          {
-            "system": "https://www.anatomiclocations.org/",
-            "code": "RID34951",
-            "display": "ankle fracture"
-          }
-        ]
-      }
+        "coding": [{
+          "system": "https://www.anatomiclocations.org/",
+          "code": "RID34951",
+          "display": "ankle fracture"
+        }]}
     },
     "component": [
       {

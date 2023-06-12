@@ -1,0 +1,152 @@
+{
+  "$schema": "./observation_schema.json",
+  "resourceType": "Observation",
+  "id": "750a32e3-1974-4fb2-8e5b-5b902b8186e3",
+  "code": {
+    "system": "https://radelement.org",
+    "code": "RDES44",
+    "display": "Pnuemothorax"
+  },
+  "bodySite": {
+    "code": {
+    "coding": [{
+      "system": "https://www.anatomiclocations.org",
+      "code": "RID1326",
+      "display": "Left lung"
+    }]}
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE418",
+            "display": "Lung tissue collapse"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE418.1",
+            "display": "Partial"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE421",
+            "display": "Presence"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE421.1",
+            "display": "Present"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE422",
+            "display": "Pleura separation (mm)"
+          }
+        ]
+      },
+      "valueString": "28"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE423",
+            "display": "Side"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://radlement.org",
+            "code": "RDE423.1",
+            "display": "Left"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE424",
+            "display": "Size"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE424.1",
+            "display": "Medium"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE425",
+            "display": "associated chest tube"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE425.0",
+            "display": "present, well-positioned"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE1653",
+            "display": "Signs of tension"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE1653.0",
+            "display": "absent"
+          }
+        ]
+      }
+    }
+  ]
+}
