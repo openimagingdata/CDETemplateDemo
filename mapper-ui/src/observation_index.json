@@ -12,5 +12,12 @@
     "samples": [
       "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/sample_observations/RDES44_Pneumothorax/observation1.json"
     ]
+  },
+  {
+    "name": "Pneumoperitoneum",
+    "cdeId": "RDES228",
+    "samples": [
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/sample_observations/RDES228_Pneumoperitoneum/observation1.json"
+    ]
   }
 ]
