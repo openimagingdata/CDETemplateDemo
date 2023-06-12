@@ -2,6 +2,7 @@ import { Stack, TextField, Toggle, PrimaryButton, MessageBar, MessageBarType } f
 import axios, { AxiosError } from 'axios';
 import React from 'react';
 import Result from './Result';
+import SampleSelection from './SampleSelection';
 
 const textFieldStyles = {
     root: {
@@ -15,30 +16,9 @@ const textFieldStyles = {
     }
 };
 
-// const testData = {
-//     result: " 42.595, 20.658, 59.874, 20.658 coordinates.  ",
-//     observation: {
-//         bodySite: {
-//             id: "RID2035",
-//             display: "ulnar collateral ligament of elbow"
-//         },
-//         components: {
-//             RDE256: "full-thickness tear",
-//             Classification: "full-thickness tear",
-//             classification: "full-thickness tear",
-//             RDE257: "abnormal",
-//         },
-//         id: "28d99870-ace5-46bd-8742-1d9a6d1796fc",
-//         code: {
-//             id: "RDES47",
-//             display: "Stener Lesion"
-//         }
-//     }
-// }
-
 const Form = () => {
-    const [observation, setObservation] = React.useState('');
-    const [template, setTemplate] = React.useState('');
+    const [observation, setObservation] = React.useState<string>('');
+    const [template, setTemplate] = React.useState<string>('');
     const [objBool, setObjBool] = React.useState(false);
     const [result, setResult] = React.useState({});
     const [error, setError] = React.useState('');
@@ -80,6 +60,11 @@ const Form = () => {
             } else {
                 console.error(error)
             }
+            
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     };
 
@@ -91,19 +76,20 @@ const Form = () => {
                     messageBarType={MessageBarType.error}
                     >{error}</MessageBar>
                 </div>}
-            <form onSubmit={handleSubmit} style={{paddingTop: '20px'}}>
+            <form onSubmit={handleSubmit} style={{paddingTop: '20px', paddingBottom: '20px'}}>
                 <Stack tokens={{childrenGap: 15}} horizontalAlign="center">
+                    <SampleSelection setText={setObservation} />
                     <TextField 
-                        label="Observation JSON String" value={observation}
+                        label="Observation JSON" value={observation}
                         onChange={(event, newValue) => setObservation(newValue ?? '')}
                         styles={textFieldStyles} multiline autoAdjustHeight
                     />
 
                     <TextField
-                        label="Mustache Template String" value={template} 
+                        label="Mustache Template" value={template} 
                         onChange={(event, newValue) => setTemplate(newValue ?? '')} 
                         styles={textFieldStyles} multiline autoAdjustHeight 
-                        />
+                    />
 
                     <Toggle
                         label="Return Observation Structure Object"
@@ -112,7 +98,9 @@ const Form = () => {
                         inlineLabel
                     />
 
-                    <PrimaryButton type="submit" text="Submit"/>
+                    <PrimaryButton 
+                        type="submit" text="Submit"
+                    />
                 </Stack>
             </form>
             {Object.keys(result).length !== 0 && (

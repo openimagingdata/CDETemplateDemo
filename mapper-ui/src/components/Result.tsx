@@ -1,4 +1,4 @@
-import { DetailsList, DetailsListLayoutMode, Tooltip } from '@fluentui/react';
+import { DetailsList, DetailsListLayoutMode } from '@fluentui/react';
 
 const Display = (data: object) => {
 
@@ -25,12 +25,12 @@ const Display = (data: object) => {
             return Display(value);
         }
         return outputValue(value);
-    }
+    };
 
     const transformedData = Object.entries(data).map(([key, value]) => ({
         key: outputValue(key),
         value: render(value)
-        }))
+        }));
 
     const columns = [
         {key: 'column1', name: 'Key', fieldName: 'key', minWidth: 100, maxWidth: 150, isResizeable: true},

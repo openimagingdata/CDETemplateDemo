@@ -1,4 +1,4 @@
-// Declared both in frontend and backend, change later
+// Declared both in frontend and backend, change later?
 
 export class Result {
     result!: string;
