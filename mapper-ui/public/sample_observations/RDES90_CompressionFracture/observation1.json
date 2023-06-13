@@ -1,0 +1,103 @@
+{
+    "$schema": "../observation_schema.json",
+    "resourceType": "Observation",
+    "id": "ae3fcd1c-7f15-4051-80a5-cf9016c38a4c",
+    "code": {
+        "system": "https://www.radelement.org",
+        "code": "RDES90",
+        "display": "Compression Fracture"
+    },
+    "bodySite": {
+        "code": {
+            "coding": [
+                {
+                    "system": "https://www.anatomiclocations.org",
+                    "code": "RID29154",
+                    "display": "Spine"
+                }
+            ]
+        }
+    },
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE531",
+                        "display": "Presence"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE531.0",
+                        "display": "Present"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE534",
+                        "display": "Spinal Involvement"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE534.0",
+                        "display": "Cord Injury"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE535",
+                        "display": "Osteopenia"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE535.0",
+                        "display": "Present"
+                    }
+                ]
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE1609",
+                        "display": "Greatest Compression"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE1609.3",
+                        "display": "C4"
+                    }
+                ]
+            }
+        }
+    ]
+}

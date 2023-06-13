@@ -9,11 +9,14 @@
   },
   "bodySite": {
     "code": {
-    "coding": [{
-      "system": "https://www.anatomiclocations.org",
-      "code": "RID1326",
-      "display": "Left lung"
-    }]}
+      "coding": [
+        {
+          "system": "https://www.anatomiclocations.org",
+          "code": "RID1326",
+          "display": "Left lung"
+        }
+      ]
+    }
   },
   "component": [
     {

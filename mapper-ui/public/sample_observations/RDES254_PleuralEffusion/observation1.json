@@ -1,0 +1,43 @@
+{
+    "$schema": "../observation_schema.json", 
+    "resourceType": "Observation", 
+    "id": "22621994-154b-4227-a145-021f8b2f1bef", 
+    "code": {
+        "system": "https://www.radelement.org",
+        "code": "RDES254", 
+        "display": "Pleural Effusion"
+    }, 
+    "bodySite": {
+        "code": {
+            "coding": [
+                {
+                    "system": "https://www.anatomiclocations.org",
+                    "code": "RID1301", 
+                    "display": "lung"
+                }
+            ]
+        }
+    }, 
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org", 
+                        "code": "RDE1652", 
+                        "display": "Presence"
+                    }
+                ]
+            }, 
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "https://www.radelement.org",
+                        "code": "RDE1652.0",
+                        "display": "Present"
+                    }
+                ]
+            }
+        }
+    ]
+}
