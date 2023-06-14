@@ -78,13 +78,14 @@ const Form = () => {
                 </div>}
             <form onSubmit={handleSubmit} style={{paddingTop: '20px', paddingBottom: '20px'}}>
                 <Stack tokens={{childrenGap: 15}} horizontalAlign="center">
-                    <SampleSelection setText={setObservation} />
+                    <SampleSelection setText={setObservation} sampleType={'observations'} />
                     <TextField 
                         label="Observation JSON" value={observation}
                         onChange={(event, newValue) => setObservation(newValue ?? '')}
                         styles={textFieldStyles} multiline autoAdjustHeight
                     />
 
+                    <SampleSelection setText={setTemplate} sampleType={'templates'} />
                     <TextField
                         label="Mustache Template" value={template} 
                         onChange={(event, newValue) => setTemplate(newValue ?? '')} 

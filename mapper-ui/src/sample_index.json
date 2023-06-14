@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Ankle Fracture",
+    "cdeId": "RDES262",
+    "samples": [
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES262_AnkleFracture/observation1.json"
+    ],
+    "templates": []
+  },
+  {
+    "name": "Compression Fracture",
+    "cdeId": "RDES90",
+    "samples": [
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES90_CompressionFracture/observation1.json"
+    ],
+    "templates": []
+  },
+  {
+    "name": "Pleural Effusion",
+    "cdeId": "RDES254",
+    "samples": [
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES254_PleuralEffusion/observation1.json"
+    ],
+    "templates": []
+  },
+  {
+    "name": "Pneumothorax",
+    "cdeId": "RDES44",
+    "samples": [
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES44_Pneumothorax/observation1.json",
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES44_Pneumothorax/observation2.json",
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES44_Pneumothorax/observation3.json"
+    ],
+    "templates": [
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_templates/RDES44_Pneumothorax/template1.mustache"
+    ]
+  },
+  {
+    "name": "Pneumoperitoneum",
+    "cdeId": "RDES228",
+    "samples": [
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES228_Pneumoperitoneum/observation1.json"
+    ],
+    "templates": []
+  },
+  {
+    "name": "Subarachnoid Hemorrhage",
+    "cdeId": "RDES91",
+    "samples": [
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES91_SubarachnoidHemorrhage/observation1.json"
+    ],
+    "templates": []
+  },
+  {
+    "name": "Traumatic Brain Injury",
+    "cdeId": "RDES1",
+    "samples": [
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES1_TraumaticBrainInjury/observation1.json"
+    ],
+    "templates": []
+  }  
+]
