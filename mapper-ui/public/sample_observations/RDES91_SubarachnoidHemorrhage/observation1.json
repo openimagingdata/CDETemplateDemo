@@ -1,168 +1,167 @@
 {
-    "$schema": "../observation_schema.json",
-    "resourceType": "Observation",
-    "id": "188f55ac-d330-4bc5-ab16-e8d6d351195f",
+  "$schema": "../observation_schema.json",
+  "resourceType": "Observation",
+  "id": "188f55ac-d330-4bc5-ab16-e8d6d351195f",
+  "code": {
+    "system": "https://radelement.org",
+    "code": "RDES91",
+    "display": "Subarachnoid Hemorrhage"
+  },
+  "bodySite": {
     "code": {
-        "system": "https://radelement.org",
-        "code": "RDES91",
-        "display": "Subarachnoid Hemorrhage"
-    },
-    "bodySite": {
-        "code": {
-            "coding": [
-                {
-                    "system": "https://www.anatomiclocations.org",
-                    "code": "RID6434",
-                    "display": "Brain"
-                }
-            ]
+      "coding": [
+        {
+          "system": "https://www.anatomiclocations.org",
+          "code": "RID6434",
+          "display": "Brain"
         }
+      ]
+    }
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE542",
+            "display": "Laterality"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE542.2",
+            "display": "Left"
+          }
+        ]
+      }
     },
-    "component": [
-        {
-            "code": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE542",
-                        "display": "Laterality"
-                    }
-                ]
-            },
-            "valueCodeableConcept": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE542.2",
-                        "display": "Left"
-                    }
-                ]
-            }
-        },
-        {
-            "code": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE543",
-                        "display": "Density"
-                    }
-                ]
-            },
-            "valueCodeableConcept": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE543.2",
-                        "display": "Low homogeneous"
-                    }
-                ]
-            }
-        },
-        {
-            "code": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE546",
-                        "display": "Intra-axial hematoma"
-                    }
-                ]
-            },
-            "valueCodeableConcept": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE546.0",
-                        "display": "Absent"
-                    }
-                ]
-            }
-        },
-        {
-            "code": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE547",
-                        "display": "Extra-axial hematoma"
-                    }
-                ]
-            },
-            "valueCodeableConcept": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE547.1",
-                        "display": "Present"
-                    }
-                ]
-            }
-        },
-        {
-            "code": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE548",
-                        "display": "Intra-cranial mass"
-                    }
-                ]
-            },
-            "valueCodeableConcept": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE548.0",
-                        "display": "Absent"
-
-                    }
-                ]
-            }
-        },
-        {
-            "code": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE549",
-                        "display": "Location"
-                    }
-                ]
-            },
-            "valueCodeableConcept": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE549.1",
-                        "display": "Frontal"
-                    }
-                ]
-            }
-        },
-        {
-            "code": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE1264",
-                        "display": "Quantity"
-                    }
-                ]
-            },
-            "valueInteger": 1
-        },
-        {
-            "code": {
-                "coding": [
-                    {
-                        "system": "https://www.radelement.org",
-                        "code": "RDE1265",
-                        "display": "Size"
-                    }
-                ]
-            },
-            "valueString": "33.7"
-        }
-    ]
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE543",
+            "display": "Density"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE543.2",
+            "display": "Low homogeneous"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE546",
+            "display": "Intra-axial hematoma"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE546.0",
+            "display": "Absent"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE547",
+            "display": "Extra-axial hematoma"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE547.1",
+            "display": "Present"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE548",
+            "display": "Intra-cranial mass"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE548.0",
+            "display": "Absent"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE549",
+            "display": "Location"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE549.1",
+            "display": "Frontal"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE1264",
+            "display": "Quantity"
+          }
+        ]
+      },
+      "valueInteger": 1
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://www.radelement.org",
+            "code": "RDE1265",
+            "display": "Size"
+          }
+        ]
+      },
+      "valueString": "33.7"
+    }
+  ]
 }
