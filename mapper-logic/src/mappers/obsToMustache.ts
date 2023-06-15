@@ -12,6 +12,15 @@ function obsToJson(obs: Observation): Record<string, string | boolean> {
     for (const key in obs.components) {
         const value: string = obs.components[key];
         res[value] = true;
+        if (key.toLowerCase() === "presence") {
+            if (value.toLowerCase() === "present") {
+                res["presence_present"] = true;
+                res["presence_absent"] = false;
+            } else {
+                res["presence_present"] = false;
+                res["presence_absent"] = true;
+            }
+        }
     }
 
     return res;

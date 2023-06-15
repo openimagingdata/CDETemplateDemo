@@ -29,7 +29,8 @@
     "samples": [
       "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES44_Pneumothorax/observation1.json",
       "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES44_Pneumothorax/observation2.json",
-      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES44_Pneumothorax/observation3.json"
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES44_Pneumothorax/observation3.json",
+      "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_observations/RDES44_Pneumothorax/observation4.json"
     ],
     "templates": [
       "https://raw.githubusercontent.com/openraddata/CDETemplateDemo/master/mapper-ui/public/sample_templates/RDES44_Pneumothorax/template1.mustache"

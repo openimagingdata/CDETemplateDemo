@@ -1,0 +1,42 @@
+{
+  "resourceType": "Observation",
+  "id": "750a32e3-1974-4fb2-8e5b-5b902b8186e3",
+  "code": {
+    "system": "https://radelement.org",
+    "code": "RDES44",
+    "display": "Pnuemothorax"
+  },
+  "bodySite": {
+    "code": {
+      "coding": [
+        {
+          "system": "https://www.anatomiclocations.org",
+          "code": "RID1326",
+          "display": "Left lung"
+        }
+      ]
+    }
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE421",
+            "display": "Presence"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://radelement.org",
+            "code": "RDE421.0",
+            "display": "absent"
+          }
+        ]
+      }
+    }
+  ]
+}
