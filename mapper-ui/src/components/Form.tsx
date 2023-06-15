@@ -1,15 +1,12 @@
 import { Stack, TextField, Toggle, PrimaryButton, MessageBar, MessageBarType } from '@fluentui/react';
 import axios, { AxiosError } from 'axios';
 import React from 'react';
-import Result from './Result';
+import Display from './Display';
 import SampleSelection from './SampleSelection';
 
 const textFieldStyles = {
     root: {
-        width: '100%',
-        '@media (min-width: 481px)': {
-            width: '75%'
-        },
+        width: '75%',
         '@media (min-width: 769px)': {
             width: '50%'
         }
@@ -71,7 +68,7 @@ const Form = () => {
     return (
         <div>
             {error &&
-                <div >
+                <div>
                     <MessageBar
                     messageBarType={MessageBarType.error}
                     >{error}</MessageBar>
@@ -105,7 +102,7 @@ const Form = () => {
                 </Stack>
             </form>
             {Object.keys(result).length !== 0 && (
-                Result(result)
+                Display(result)
             )}
         </div>
     );
